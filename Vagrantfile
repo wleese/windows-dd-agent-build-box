@@ -39,7 +39,7 @@ Vagrant.configure(2) do |config|
   # Provisioning has never felt so cool with Berkshelf...
   # Yeah yeah, you got it right... we've actually got nothing to do :D
   # The ./Berksfile is automatically detected and used to provision the VM
-  vagrant.vm.provision :chef_solo do |chef|
+  config.vm.provision :chef_solo do |chef|
     chef.run_list = [
       "recipe[windows-dd-agent-build-box]"
     ]
